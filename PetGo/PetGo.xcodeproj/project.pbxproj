@@ -52,7 +52,6 @@
 				0ECB4F3ED3B3B8F1DC5660AF /* Pods-PetGo.debug.xcconfig */,
 				39D1D60DFD2EA6569001B1ED /* Pods-PetGo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
