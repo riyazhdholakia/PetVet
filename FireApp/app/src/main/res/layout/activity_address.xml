@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/valuefield11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Street"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="83dp" />
+
+    <EditText
+        android:id="@+id/valuefield12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="city"
+        app:layout_constraintTop_toBottomOf="@+id/valuefield11"
+        tools:layout_editor_absoluteX="74dp" />
+
+    <EditText
+        android:id="@+id/valuefield13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="state"
+        app:layout_constraintTop_toBottomOf="@+id/valuefield12"
+        tools:layout_editor_absoluteX="82dp" />
+
+    <EditText
+        android:id="@+id/valuefield14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="zip"
+        app:layout_constraintTop_toBottomOf="@+id/valuefield13"
+        tools:layout_editor_absoluteX="81dp" />
+
+    <EditText
+        android:id="@+id/valuefield15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="type"
+        app:layout_constraintTop_toBottomOf="@+id/valuefield14"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <Button
+        android:id="@+id/addressbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@+id/valuefield15"
+        tools:layout_editor_absoluteX="137dp" />
+
+    <Button
+        android:id="@+id/viewaddressbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="View Addresses"
+        app:layout_constraintTop_toBottomOf="@+id/addressbtn"
+        tools:layout_editor_absoluteX="149dp" />
+
+</android.support.constraint.ConstraintLayout>
