@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuth.m"
+            timestampString = "577401923.197607"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1810"
+            endingLineNumber = "1810"
+            landmarkName = "-signInFlowAuthDataResultCallbackByDecoratingCallback:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__64-[FIRAuth signInFlowAuthDataResultCallbackByDecoratingCallback:]_block_invoke"
+                  moduleName = "PetGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/theAIRBEAST/Desktop/Mobile%20Dev/PetVet/Do%20NOT%20Open%20This%20%20%20Folder/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuth.m"
+                  timestampString = "577401923.796298"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1810"
+                  endingLineNumber = "1810"
+                  offsetFromSymbolStart = "557">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__64-[FIRAuth signInFlowAuthDataResultCallbackByDecoratingCallback:]_block_invoke.779"
+                  moduleName = "PetGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/theAIRBEAST/Desktop/Mobile%20Dev/PetVet/Do%20NOT%20Open%20This%20%20%20Folder/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuth.m"
+                  timestampString = "577401923.80734"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1810"
+                  endingLineNumber = "1810"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.781"
+                  moduleName = "PetGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/theAIRBEAST/Desktop/Mobile%20Dev/PetVet/Do%20NOT%20Open%20This%20%20%20Folder/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuth.m"
+                  timestampString = "577401923.815912"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1810"
+                  endingLineNumber = "1810"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
