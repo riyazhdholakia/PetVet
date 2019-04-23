@@ -15,17 +15,15 @@ class ConfirmationViewController: UIViewController {
     var min = 100000
     var max = 999999
     override func viewDidLoad() {
-        func randomInt(min: Int, max: Int) -> Int {
-            return min + Int(arc4random_uniform(UInt32(max - min + 1)))
-        }
-        print(min)
-        confirmationLabel.text = "Confirmation Number: \(min)"
+        let number = Int.random(in: 100000 ... 999999)
+        print(number)
+        confirmationLabel.text = "Confirmation Number: \(number)"
     }
     
-    func randomInt(min: Int, max: Int) -> Int {
-        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
-    }
-    
+//    func randomInt(min: Int, max: Int) -> Int {
+//        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+//    }
+//
     @IBAction func onDismissTapped(_ sender: Any) {
         
     }
