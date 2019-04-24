@@ -17,6 +17,10 @@
 		2F61EE9E226A6C3300CC057D /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61EE9D226A6C3300CC057D /* ConfirmationViewController.swift */; };
 		2F61EEA0226A6F6A00CC057D /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61EE9F226A6F6A00CC057D /* RootNavigationController.swift */; };
 		2F61EEA2226A713200CC057D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61EEA1226A713200CC057D /* Model.swift */; };
+		2F62FAD92270A31900BC524D /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62FAD82270A31900BC524D /* AddPetViewController.swift */; };
+		2F62FADB2270A33300BC524D /* AddNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62FADA2270A33300BC524D /* AddNameViewController.swift */; };
+		2F62FADD2270A34600BC524D /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62FADC2270A34600BC524D /* AddAddressViewController.swift */; };
+		2F62FADF2270A36000BC524D /* AddPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62FADE2270A35F00BC524D /* AddPhoneNumberViewController.swift */; };
 		2FBA2613226537C0006D28FC /* PickUpsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA2612226537C0006D28FC /* PickUpsTableViewController.swift */; };
 		2FBA261522653BD9006D28FC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA261422653BD8006D28FC /* ProfileTableViewController.swift */; };
 		2FF93715226E173B00294CE2 /* ClinicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF93714226E173B00294CE2 /* ClinicsTableViewController.swift */; };
@@ -42,6 +46,10 @@
 		2F61EE9D226A6C3300CC057D /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		2F61EE9F226A6F6A00CC057D /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		2F61EEA1226A713200CC057D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2F62FAD82270A31900BC524D /* AddPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
+		2F62FADA2270A33300BC524D /* AddNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameViewController.swift; sourceTree = "<group>"; };
+		2F62FADC2270A34600BC524D /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
+		2F62FADE2270A35F00BC524D /* AddPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		2FBA2612226537C0006D28FC /* PickUpsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpsTableViewController.swift; sourceTree = "<group>"; };
 		2FBA261422653BD8006D28FC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		2FF93714226E173B00294CE2 /* ClinicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicsTableViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 				2F61EE99226A61FB00CC057D /* HomePageViewController.swift */,
 				2FF93714226E173B00294CE2 /* ClinicsTableViewController.swift */,
 				2F1A5E452261349B004A95E3 /* Main.storyboard */,
+				2F62FAD82270A31900BC524D /* AddPetViewController.swift */,
+				2F62FADA2270A33300BC524D /* AddNameViewController.swift */,
+				2F62FADC2270A34600BC524D /* AddAddressViewController.swift */,
+				2F62FADE2270A35F00BC524D /* AddPhoneNumberViewController.swift */,
 				2FF9371E226E48BC00294CE2 /* SelectDateTimeAndConfirmViewController.swift */,
 				2FF9371A226E458300294CE2 /* PickUpAddressTableViewController.swift */,
 				2FF9371C226E45B400294CE2 /* DropOffAddressTableViewController.swift */,
@@ -264,10 +276,14 @@
 				2FF9371D226E45B500294CE2 /* DropOffAddressTableViewController.swift in Sources */,
 				2F61EE9A226A61FB00CC057D /* HomePageViewController.swift in Sources */,
 				2F61EEA0226A6F6A00CC057D /* RootNavigationController.swift in Sources */,
+				2F62FADF2270A36000BC524D /* AddPhoneNumberViewController.swift in Sources */,
 				2F1A5E422261349A004A95E3 /* AppDelegate.swift in Sources */,
 				2F61EEA2226A713200CC057D /* Model.swift in Sources */,
+				2F62FAD92270A31900BC524D /* AddPetViewController.swift in Sources */,
 				2FF9371B226E458300294CE2 /* PickUpAddressTableViewController.swift in Sources */,
+				2F62FADD2270A34600BC524D /* AddAddressViewController.swift in Sources */,
 				2FF93717226E2EFC00294CE2 /* ServicesTableViewController.swift in Sources */,
+				2F62FADB2270A33300BC524D /* AddNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

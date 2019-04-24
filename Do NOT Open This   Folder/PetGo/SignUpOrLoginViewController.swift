@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 
 class SignUpOrLoginViewController: UIViewController {
@@ -21,9 +22,12 @@ class SignUpOrLoginViewController: UIViewController {
     
     @IBOutlet weak var theRealEmailTextLabel: UITextField!
     
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        ref = Database.database().reference()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +64,7 @@ class SignUpOrLoginViewController: UIViewController {
                             print(self.theRealEmailTextLabel.text!)
                             print(self.passwordTextLabel.text!)
                         }
+                        //self.ref.child("users").child().setValue(["email": theRealEmailTextLabel.text!])
 //                            else {
 //                                errorMsgLabel.text = "Password and Confirm Password do not match"
 //                            }
