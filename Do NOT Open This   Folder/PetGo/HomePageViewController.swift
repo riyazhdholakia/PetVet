@@ -57,6 +57,8 @@ class HomePageViewController: UIViewController {
             print(email!)
             // ...
             
+            ref.child("users/\(user.uid)/email").setValue(email!)
+            
 //            ref.child("user/uid1").child(user.uid).setValuesForKeys(["email" : email!])
 //            
 //            self.self.children("users").child(user.uid).setValue(["username": email])
