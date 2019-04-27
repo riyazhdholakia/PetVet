@@ -101,7 +101,7 @@
         <!--PetGo-->
         <scene sceneID="VSS-Vp-Hb3">
             <objects>
-                <viewController title="PetGo" id="daS-RO-7Jd" customClass="HomePageViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="PetGo" id="daS-RO-7Jd" customClass="HomePageViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GJe-xn-y3m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -455,14 +455,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address Type Ex: Home, Work" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RfU-Ck-Yxg">
+                                <rect key="frame" x="16" y="300" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5ld-0Y-6tH" firstAttribute="trailing" secondItem="B20-zA-ZWf" secondAttribute="trailing" id="8wY-Oc-ben"/>
                             <constraint firstItem="1QP-Fg-xPf" firstAttribute="leading" secondItem="LVy-RH-ezu" secondAttribute="leading" id="C2w-ti-RPV"/>
                             <constraint firstItem="B20-zA-ZWf" firstAttribute="trailing" secondItem="1QP-Fg-xPf" secondAttribute="trailing" id="Ch6-uo-AjP"/>
+                            <constraint firstItem="RfU-Ck-Yxg" firstAttribute="trailing" secondItem="LVy-RH-ezu" secondAttribute="trailing" id="DDG-WK-6Ax"/>
                             <constraint firstItem="1QP-Fg-xPf" firstAttribute="top" secondItem="B20-zA-ZWf" secondAttribute="bottom" constant="22" id="DgU-T9-yfG"/>
                             <constraint firstItem="1QP-Fg-xPf" firstAttribute="trailing" secondItem="LVy-RH-ezu" secondAttribute="trailing" id="FeB-Di-RaG"/>
+                            <constraint firstItem="RfU-Ck-Yxg" firstAttribute="leading" secondItem="LVy-RH-ezu" secondAttribute="leading" id="Nqs-Hk-yJQ"/>
                             <constraint firstItem="5ld-0Y-6tH" firstAttribute="leading" secondItem="B20-zA-ZWf" secondAttribute="leading" id="OB9-EA-t7x"/>
                             <constraint firstItem="5ld-0Y-6tH" firstAttribute="leading" secondItem="35s-Qs-RYa" secondAttribute="leadingMargin" id="aTx-fw-FDi"/>
                             <constraint firstItem="5ld-0Y-6tH" firstAttribute="trailing" secondItem="35s-Qs-RYa" secondAttribute="trailingMargin" id="ddi-uU-vrO"/>
@@ -470,6 +478,7 @@
                             <constraint firstItem="LVy-RH-ezu" firstAttribute="top" secondItem="1QP-Fg-xPf" secondAttribute="bottom" constant="27" id="qIt-6R-qDN"/>
                             <constraint firstItem="5ld-0Y-6tH" firstAttribute="top" secondItem="ggF-3L-8qs" secondAttribute="top" constant="23" id="uqM-CS-6kp"/>
                             <constraint firstItem="B20-zA-ZWf" firstAttribute="top" secondItem="5ld-0Y-6tH" secondAttribute="bottom" constant="25" id="vd1-Pd-QQp"/>
+                            <constraint firstItem="RfU-Ck-Yxg" firstAttribute="top" secondItem="LVy-RH-ezu" secondAttribute="bottom" constant="19" id="vrb-Ow-zng"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ggF-3L-8qs"/>
                     </view>
@@ -477,11 +486,11 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="lpU-k9-RO1">
                             <connections>
                                 <action selector="onSaveTapped:" destination="P8i-iO-8bl" id="fCh-Fm-zhl"/>
-                                <segue destination="x59-nT-J13" kind="show" id="V0r-7F-TFC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addressType" destination="RfU-Ck-Yxg" id="rcB-U8-1kP"/>
                         <outlet property="cityTextField" destination="B20-zA-ZWf" id="etS-9i-8w8"/>
                         <outlet property="stateTextField" destination="1QP-Fg-xPf" id="aIl-Yl-v4h"/>
                         <outlet property="streetTextField" destination="5ld-0Y-6tH" id="cVt-Wz-ojf"/>
@@ -490,7 +499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aX5-gT-5MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5177" y="1730"/>
+            <point key="canvasLocation" x="5176.8000000000002" y="1729.385307346327"/>
         </scene>
         <!--Phone Number-->
         <scene sceneID="whW-u3-jY6">
@@ -519,7 +528,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="2I3-xS-rO9">
                             <connections>
                                 <action selector="onSaveTapped:" destination="S0q-t7-pDB" id="Cjh-PR-Aje"/>
-                                <segue destination="x59-nT-J13" kind="show" id="A0B-01-Lie"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -551,12 +559,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet DOB 01/15/2018" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o70-uW-GIe">
+                                <rect key="frame" x="16" y="187" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="o70-uW-GIe" firstAttribute="trailing" secondItem="B56-3Q-Xi7" secondAttribute="trailing" id="5BF-VE-XiW"/>
                             <constraint firstItem="J1g-26-XOo" firstAttribute="trailing" secondItem="B56-3Q-Xi7" secondAttribute="trailing" id="Rgv-N2-CBR"/>
+                            <constraint firstItem="o70-uW-GIe" firstAttribute="top" secondItem="B56-3Q-Xi7" secondAttribute="bottom" constant="24" id="cXb-pr-OPB"/>
                             <constraint firstItem="J1g-26-XOo" firstAttribute="trailing" secondItem="GaF-wn-sgA" secondAttribute="trailingMargin" id="evd-mT-LA5"/>
                             <constraint firstItem="J1g-26-XOo" firstAttribute="leading" secondItem="GaF-wn-sgA" secondAttribute="leadingMargin" id="fnx-g7-3Pu"/>
+                            <constraint firstItem="o70-uW-GIe" firstAttribute="leading" secondItem="B56-3Q-Xi7" secondAttribute="leading" id="gKf-tN-bX4"/>
                             <constraint firstItem="J1g-26-XOo" firstAttribute="leading" secondItem="B56-3Q-Xi7" secondAttribute="leading" id="hdR-Rk-AeY"/>
                             <constraint firstItem="B56-3Q-Xi7" firstAttribute="top" secondItem="J1g-26-XOo" secondAttribute="bottom" constant="20" id="qDO-AH-zzx"/>
                             <constraint firstItem="J1g-26-XOo" firstAttribute="top" secondItem="845-7b-rKN" secondAttribute="top" constant="19" id="yCq-DN-xWG"/>
@@ -571,6 +588,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="petDOB" destination="o70-uW-GIe" id="TCv-gH-6PR"/>
                         <outlet property="petNameTextField" destination="J1g-26-XOo" id="V5O-Qw-9FQ"/>
                         <outlet property="petTypeTextField" destination="B56-3Q-Xi7" id="9SL-pR-66m"/>
                     </connections>
@@ -718,7 +736,7 @@
         <!--Root Navigation Controller-->
         <scene sceneID="E29-de-w7l">
             <objects>
-                <navigationController storyboardIdentifier="Root" automaticallyAdjustsScrollViewInsets="NO" id="x59-nT-J13" customClass="RootNavigationController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Root" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x59-nT-J13" customClass="RootNavigationController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eqK-hV-wKl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -760,7 +778,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Bo5-bT-7VN">
                             <connections>
                                 <action selector="onSaveTapped:" destination="P4U-ph-rm3" id="IU1-Tu-5y1"/>
-                                <segue destination="x59-nT-J13" kind="show" id="K7C-4j-0e0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -773,7 +790,4 @@
             <point key="canvasLocation" x="4288.8000000000002" y="1729.385307346327"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hpn-79-3na"/>
-    </inferredMetricsTieBreakers>
 </document>

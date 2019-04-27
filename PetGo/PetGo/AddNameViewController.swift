@@ -36,6 +36,8 @@ class AddNameViewController: UIViewController {
             print(email!)
             // ...
         ref.child("users/\(user.uid)/name").setValue(nameTextField.text!)
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: "Root") as! RootNavigationController
+            self.present(vc, animated: true, completion: nil)
         }
     }
     

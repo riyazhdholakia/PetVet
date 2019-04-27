@@ -18,6 +18,7 @@ class AddPetViewController: UIViewController {
     
     @IBOutlet weak var petTypeTextField: UITextField!
     @IBOutlet weak var petNameTextField: UITextField!
+    @IBOutlet weak var petDOB: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,11 +37,11 @@ class AddPetViewController: UIViewController {
             print(uid)
             print(email!)
             // ...
-            ref.child("users/\(user.uid)/petName").setValue(petTypeTextField.text!)
-            ref.child("users/\(user.uid)/petType").setValue(petNameTextField.text!)
-            //performSegue(withIdentifier: "Root", sender: nil)
-            //presentViewController(nextViewController, animated: true, completion: nil)
-            
+            ref.child("users/\(user.uid)/petType").setValue(petTypeTextField.text!)
+            ref.child("users/\(user.uid)/petName").setValue(petNameTextField.text!)
+            ref.child("users/\(user.uid)/petDOB").setValue(petDOB.text!)
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: "Root") as! RootNavigationController
+            self.present(vc, animated: true, completion: nil)
         }
         
     }

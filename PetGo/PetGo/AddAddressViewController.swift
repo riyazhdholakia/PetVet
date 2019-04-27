@@ -20,6 +20,7 @@ class AddAddressViewController: UIViewController {
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
+    @IBOutlet weak var addressType: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,9 @@ class AddAddressViewController: UIViewController {
             ref.child("users/\(user.uid)/addressCity").setValue(cityTextField.text!)
             ref.child("users/\(user.uid)/addressState").setValue(stateTextField.text!)
             ref.child("users/\(user.uid)/addressZipCode").setValue(zipCodeTextField.text!)
+            ref.child("users/\(user.uid)/addressType").setValue(addressType.text!)
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: "Root") as! RootNavigationController
+            self.present(vc, animated: true, completion: nil)
         }
     }
     

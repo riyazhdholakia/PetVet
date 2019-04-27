@@ -37,6 +37,8 @@ class AddPhoneNumberViewController: UIViewController {
             print(email!)
             // ...
             ref.child("users/\(user.uid)/phoneNumber").setValue(phoneNumberTextField.text!)
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: "Root") as! RootNavigationController
+            self.present(vc, animated: true, completion: nil)
         }
         
     }
