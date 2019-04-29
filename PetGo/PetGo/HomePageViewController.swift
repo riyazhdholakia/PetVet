@@ -64,4 +64,16 @@ class HomePageViewController: UIViewController {
 //            self.self.children("users").child(user.uid).setValue(["username": email])
         }
     }
+    
+    @IBAction func onLogOutTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            let loginVC = self.storyboard!.instantiateViewController(withIdentifier: "loginVC")
+            self.present(loginVC, animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
 }

@@ -146,7 +146,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Iu1-fl-srB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="PetGo" id="GLX-fV-Rso"/>
+                    <navigationItem key="navigationItem" title="PetGo" id="GLX-fV-Rso">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="ZZz-aX-cDy">
+                            <connections>
+                                <action selector="onLogOutTapped:" destination="daS-RO-7Jd" id="xrD-uo-zjj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vk-gp-y3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
