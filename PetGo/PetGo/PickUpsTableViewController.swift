@@ -17,6 +17,7 @@ class PickUpsTableViewController: UITableViewController {
     var pickups: [String] = []
     var petNames: [String] = []
     var confirmationNums: [String] = []
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +26,36 @@ class PickUpsTableViewController: UITableViewController {
     }
     
     func fetchPickUps() {
-        var ref: DatabaseReference!
-        
         ref = Database.database().reference()
+        let user = Auth.auth().currentUser
+        if let user = user {
+            // The user's ID, unique to the Firebase project.
+            // Do NOT use this value to authenticate with your backend server,
+            // if you have one. Use getTokenWithCompletion:completion: instead.
+            let uid = user.uid
+            let email = user.email
+            print(uid)
+            print(email!)
+            //var stringUid : String {uid}
+            ref.child("users").child(uid).child("selectedPet").observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value1 = snapshot.value as? NSDictionary
+                //let username = value?["username"] as? String ?? ""
+                let petName = snapshot.value as? String ?? ""
+                //self.pickups.append(petName)
+               // self.tableView.reloadData()
+                
+                self.ref.child("users").child(uid).child("selectedDate").observeSingleEvent(of: .value, with: { (snapshot) in
+                    // Get user value
+                    let value2 = snapshot.value as? NSDictionary
+                    //let username = value?["username"] as? String ?? ""
+                    let date = snapshot.value as? String ?? ""
+                    self.pickups.append(petName + " " + date)
+                    self.tableView.reloadData()
+                })
+            })
+        }
         
-        ref.child("users/petName").observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            let petName = snapshot.value as? String ?? ""
-            print("HIIIIIIIIIII" + petName + "BYYYYE")
-            print(snapshot.value)
-            self.pickups.append(petName)
-            self.tableView.reloadData()
-            print(self.pickups)
-        })
         
 //        ref.child("users/confirmationNum").observeSingleEvent(of: .value, with: { (snapshot) in
 //            // Get user value

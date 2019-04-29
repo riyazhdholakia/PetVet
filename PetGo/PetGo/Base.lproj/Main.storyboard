@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="70.5" width="365" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnA-lu-dZ6">
                                         <rect key="frame" x="0.0" y="111.5" width="365" height="20.5"/>
@@ -53,7 +53,7 @@
                                         <rect key="frame" x="0.0" y="143" width="365" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coi-pe-dbC">
                                         <rect key="frame" x="0.0" y="184" width="365" height="47"/>
@@ -161,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CYZ-Us-H1f">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Mixed" id="CYZ-Us-H1f">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CYZ-Us-H1f" id="ndj-NI-agr">
@@ -316,13 +316,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Gj8-xk-nEw" kind="show" id="8JJ-3b-WbD"/>
+                                    <segue destination="Gj8-xk-nEw" kind="show" id="m1a-5C-jvd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Jm0-Ua-ZYV" id="bLZ-eY-xi0"/>
-                            <outlet property="delegate" destination="Jm0-Ua-ZYV" id="v7l-ri-jw5"/>
+                            <outlet property="delegate" destination="Jm0-Ua-ZYV" id="XiK-9R-Pg4"/>
                         </connections>
                     </tableView>
                 </tableViewController>
@@ -347,7 +347,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="utp-gt-a65" kind="show" id="Jy8-US-NRl"/>
+                                    <segue destination="utp-gt-a65" kind="show" id="0Xs-RP-Xdy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -378,7 +378,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vqM-Vh-ziA" kind="show" id="3Xq-3j-F7Y"/>
+                                    <segue destination="vqM-Vh-ziA" kind="show" id="kQt-eC-KJF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -395,7 +395,7 @@
         <!--Select Pick-Up Address-->
         <scene sceneID="vEl-kx-gzo">
             <objects>
-                <tableViewController storyboardIdentifier="PickUpAddress" title="Select Pick-Up Address" id="vqM-Vh-ziA" customClass="PickUpAddressTableViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PickUp" title="Select Pick-Up Address" id="vqM-Vh-ziA" customClass="PickUpAddressTableViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GUT-9y-CT5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -409,7 +409,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7Cq-vb-hFb" kind="show" id="cJS-T5-IxQ"/>
+                                    <segue destination="7Cq-vb-hFb" kind="show" id="RHg-JW-YRf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -600,7 +600,7 @@
         <!--Select Drop-Off Address-->
         <scene sceneID="FuI-ig-p4p">
             <objects>
-                <tableViewController title="Select Drop-Off Address" id="7Cq-vb-hFb" customClass="DropOffAddressTableViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DropOff" title="Select Drop-Off Address" id="7Cq-vb-hFb" customClass="DropOffAddressTableViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YR4-KO-6Sp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -614,7 +614,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vhq-m7-eEw" kind="show" id="liJ-9u-sLr"/>
+                                    <segue destination="vhq-m7-eEw" kind="show" id="qvw-FS-y9H"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -631,7 +631,7 @@
         <!--Select Pick-Up Date and Time-->
         <scene sceneID="IEc-Qy-hlo">
             <objects>
-                <viewController title="Select Pick-Up Date and Time" id="vhq-m7-eEw" customClass="SelectDateTimeAndConfirmViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Date" title="Select Pick-Up Date and Time" id="vhq-m7-eEw" customClass="SelectDateTimeAndConfirmViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IE4-ij-6NO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -661,7 +661,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onConfirmPressed:" destination="vhq-m7-eEw" eventType="touchUpInside" id="j3y-At-cJm"/>
-                                    <segue destination="tOc-mo-ZVl" kind="presentation" id="EUY-Pz-p8v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -687,7 +686,7 @@
         <!--Confirmation View Controller-->
         <scene sceneID="bOK-0y-9XR">
             <objects>
-                <viewController id="tOc-mo-ZVl" customClass="ConfirmationViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Confirm" id="tOc-mo-ZVl" customClass="ConfirmationViewController" customModule="PetGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cp7-oG-5Vv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -710,7 +709,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onDismissTapped:" destination="tOc-mo-ZVl" eventType="touchUpInside" id="Rjo-nW-PTe"/>
-                                    <segue destination="x59-nT-J13" kind="presentation" id="hpn-79-3na"/>
                                 </connections>
                             </button>
                         </subviews>

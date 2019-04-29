@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>71131256769-qlcnt6r3eq818tr2rids6o65089tnok6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.71131256769-qlcnt6r3eq818tr2rids6o65089tnok6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBfcqA7wmR7ZC1VPSM1s4JshtJJ_5H7law</string>
+	<key>GCM_SENDER_ID</key>
+	<string>71131256769</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.riyazhdholakia.PetGo</string>
+	<key>PROJECT_ID</key>
+	<string>petvet-18b70</string>
+	<key>STORAGE_BUCKET</key>
+	<string>petvet-18b70.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:71131256769:ios:419e14954e2182e0</string>
+	<key>DATABASE_URL</key>
+	<string>https://petvet-18b70.firebaseio.com</string>
+</dict>
+</plist>

@@ -15,6 +15,7 @@ class DropOffAddressTableViewController: UITableViewController {
     
     //var pets = ["billy", "joe"]
     var addresses: [String] = []
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,23 +24,25 @@ class DropOffAddressTableViewController: UITableViewController {
     }
     
     func fetchAddresses() {
-        var ref: DatabaseReference!
-        
         ref = Database.database().reference()
         
-        ref.child("users/addressStreet").observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            let username = value?["username"] as? String ?? ""
-            // let user = User(username: username)
-            var address = snapshot.value as? String ?? ""
-            print("HIIIIIIIIIII" + address + "BYYYYE")
-            print(snapshot.value)
-            self.addresses.append(address)
-            self.tableView.reloadData()
-            // ...
-            print(self.addresses)
-        })
+        let user = Auth.auth().currentUser
+        if let user = user {
+            // The user's ID, unique to the Firebase project.
+            // Do NOT use this value to authenticate with your backend server,
+            // if you have one. Use getTokenWithCompletion:completion: instead.
+            let uid = user.uid
+            let email = user.email
+            ref.child("users").child(uid).child("addressType").observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                //let username = value?["username"] as? String ?? ""
+                let addressType = snapshot.value as? String ?? ""
+                self.addresses.append(addressType)
+                print(addressType)
+                self.tableView.reloadData()
+            })
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,7 +56,24 @@ class DropOffAddressTableViewController: UITableViewController {
         return cell
     }
     
-    //    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-    //        performSegue(withIdentifier: "Services", sender: self)
-    //    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let indexPath = tableView.indexPathForSelectedRow //optional, to get from any UIButton for example
+        let currentCell = tableView.cellForRow(at: indexPath!) as! UITableViewCell
+        
+        ref = Database.database().reference()
+        let user = Auth.auth().currentUser
+        if let user = user {
+            // The user's ID, unique to the Firebase project.
+            // Do NOT use this value to authenticate with your backend server,
+            // if you have one. Use getTokenWithCompletion:completion: instead.
+            let uid = user.uid
+            let email = user.email
+            print(uid)
+            print(email!)
+            // ...
+            ref.child("users/\(user.uid)/selectedDropOff").setValue(currentCell.textLabel!.text)
+//            let vc = self.storyboard!.instantiateViewController(withIdentifier: "Dates") as! UITableViewController
+//            self.present(vc, animated: true, completion: nil)
+        }
+    }
 }

@@ -15,31 +15,33 @@ class SelectPetTableViewController: UITableViewController {
     
     //var pets = ["billy", "joe"]
     var pets: [String] = []
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.delegate = self
+        tableView.dataSource = self
         fetchPets()
     }
     
     func fetchPets() {
-        var ref: DatabaseReference!
-        
         ref = Database.database().reference()
+        let user = Auth.auth().currentUser
+        if let user = user {
+        let uid = user.uid
+        let email = user.email
         
-        ref.child("users/petName").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("users").child(uid).child("petName").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
-            let username = value?["username"] as? String ?? ""
-            // let user = User(username: username)
-            var petName = snapshot.value as? String ?? ""
-            print("HIIIIIIIIIII" + petName + "BYYYYE")
-            print(snapshot.value)
+            //let username = value?["username"] as? String ?? ""
+            let petName = snapshot.value as? String ?? ""
             self.pets.append(petName)
+            print(petName)
             self.tableView.reloadData()
-            // ...
-            print(self.pets)
         })
+        }
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,7 +55,48 @@ class SelectPetTableViewController: UITableViewController {
         return cell
     }
     
+   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        let indexPath = tableView.indexPathForSelectedRow //optional, to get from any UIButton for example
+    //        let currentCell = tableView.cellForRow(at: indexPath!) as! UITableViewCell
+    //print("Printing here1: " + (currentCell.textLabel?.text)!)
+    ref = Database.database().reference()
+    let user = Auth.auth().currentUser
+    if let user = user {
+        // The user's ID, unique to the Firebase project.
+        // Do NOT use this value to authenticate with your backend server,
+        // if you have one. Use getTokenWithCompletion:completion: instead.
+        let uid = user.uid
+        let email = user.email
+        print(uid)
+        print(email!)
+        // ...
+        ref.child("users/\(user.uid)/selectedPet").setValue(pets[indexPath.row])
+        print("Printing here: " + (pets[indexPath.row]))
+//        let vc = self.storyboard!.instantiateViewController(withIdentifier: "Clinics") as! UITableViewController
+//        self.present(vc, animated: true, completion: nil)
+    }
+    }
+    }
+    
 //    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "Clinics", sender: self)
+////        let indexPath = tableView.indexPathForSelectedRow //optional, to get from any UIButton for example
+////        let currentCell = tableView.cellForRow(at: indexPath!) as! UITableViewCell
+////print("Printing here1: " + (currentCell.textLabel?.text)!)
+//        ref = Database.database().reference()
+//        let user = Auth.auth().currentUser
+//        if let user = user {
+//            // The user's ID, unique to the Firebase project.
+//            // Do NOT use this value to authenticate with your backend server,
+//            // if you have one. Use getTokenWithCompletion:completion: instead.
+//            let uid = user.uid
+//            let email = user.email
+//            print(uid)
+//            print(email!)
+//            // ...
+//            ref.child("users/\(user.uid)/selectedPet").setValue(pets[indexPath.row])
+//            print("Printing here: " + (pets[indexPath.row]))
+//            let vc = self.storyboard!.instantiateViewController(withIdentifier: "Clinics") as! UITableViewController
+//            self.present(vc, animated: true, completion: nil)
+//        }
 //    }
-}
+//}
